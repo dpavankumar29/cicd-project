@@ -30,12 +30,5 @@ pipeline {
                 bat 'docker push %DOCKER_IMAGE%:%BUILD_NUMBER%'
             }
         }
-
-        stage('Deploy to Kubernetes') {
-            steps {
-                bat 'kubectl apply -f deployment.yaml'
-                bat 'kubectl apply -f service.yaml'
-            }
-        }
     }
 }
