@@ -7,7 +7,7 @@ class Handler(BaseHTTPRequestHandler):
         self.send_response(200)
         self.send_header("Content-type", "text/html")
         self.end_headers()
-        self.wfile.write(b"CI/CD Updated to V4 (Deployed) ")
+        self.wfile.write(b"CI/CD Updated to V1 (ReDeployed) ")
 
 server = HTTPServer(("0.0.0.0", PORT), Handler)
 print(f"Server running on port {PORT}")
