@@ -7,7 +7,7 @@ class Handler(BaseHTTPRequestHandler):
         self.send_response(200)
         self.send_header("Content-type", "text/html")
         self.end_headers()
-        self.wfile.write(   b"CI/CD pipeline testing (demo purpose) ")
+        self.wfile.write(   b"CI/CD pipeline testing v2 (demo purpose testing) ")
 
 server = HTTPServer(("0.0.0.0", PORT), Handler)
 print(f"Server running on port {PORT}")
